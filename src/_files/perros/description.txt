@@ -1,0 +1,2 @@
+Coleccion de <b>perros</b>. <br/>
+Este texto de descripción se obtiene del fichero /_files/perros/description.txt

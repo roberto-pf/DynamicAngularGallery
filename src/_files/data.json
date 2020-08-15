@@ -45,17 +45,10 @@
 			},
 			{
 				"iconImg1" : "fab",
-				"iconImg2" : "facebook",
-				"iconClass" : "fa fa-facebook",
-				"url" : "https://www.facebook.com/",
-				"userName" : "UserNameFacebook"
-			},
-			{
-				"iconImg1" : "fab",
 				"iconImg2" : "twitter",
 				"iconClass" : "fa fa-twitter",
-				"url" : "https://twitter.com/",
-				"userName" : "@UserNameTwitter"
+				"url" : "https://twitter.com/robertopf81",
+				"userName" : "@robertopf81"
 			}
 		]
 	}
