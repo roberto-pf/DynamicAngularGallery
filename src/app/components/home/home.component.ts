@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonDataService } from '../../services/json-data/json-data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  info : any = this.jsonDataService.info; 
+
+  constructor(private jsonDataService : JsonDataService) { }
 
   ngOnInit(): void {
   }

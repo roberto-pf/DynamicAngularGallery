@@ -1,1 +1,29 @@
-<p>about works!</p>
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+      <ul class="list-unstyled">
+
+        <li class="media" *ngFor="let item of info.about.socialMedia" >
+          <fa-icon [icon]="[ item.iconImg1, item.iconImg2 ]" class="{{item.iconClass}}"></fa-icon>
+          <div class="media-body align-self-center">
+            <a href="{{item.url}}" class="nav-link" target="_blank">
+              <h5 class="mt-0 mb-1">{{item.userName}}</h5>
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+<br/>
+  
+  
+  
+  
