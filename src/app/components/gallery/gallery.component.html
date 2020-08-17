@@ -22,7 +22,7 @@
           </button>
         </div>
         <div class="modal-body">
-            <img
+            <img  *ngIf="modalViewElement.name"
                 src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}" 
                 alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block"/>
         </div>
