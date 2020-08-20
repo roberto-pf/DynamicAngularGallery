@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Configuration data.json",
+        "file": "configuration.md",
+        "children": [
+            {
+                "title": "Principal",
+                "file": "configuration_principal.md"
+            },
+            {
+                "title": "Menu",
+                "file": "configuration_menu.md"
+            },
+            {
+                "title": "Footer",
+                "file": "configuration_footer.md"
+            },
+            {
+                "title": "About",
+                "file": "configuration_about.md"
+            }
+        ]
+    }
+]

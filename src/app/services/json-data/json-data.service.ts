@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import webData from '../../../_files/data.json';
 
+
+/**
+ * Servicio que realiza el acceso a la información del data.json. El cuál,
+ * contiene toda la información de configuración para la aplicación.
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class JsonDataService {
 
+  /**
+   * información para configurar la aplicación.
+   */
   public info:{
     titleSite:string, 
     descriptionSite:string,
@@ -34,9 +42,10 @@ export class JsonDataService {
     }
   } = this.getInfoJson();
 
-
-  constructor() { }
-
+  /**
+   * Devuelve el contenido del fichero data.json
+   * @returns - data.json
+   */
   public getInfoJson(){
     return webData;
   }

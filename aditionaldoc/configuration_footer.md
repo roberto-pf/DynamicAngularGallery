@@ -1,0 +1,1 @@
+		"description" : "&copy;Copyright 2020 - http://gallery.disastercode.com.es"
