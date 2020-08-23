@@ -1,3 +1,7 @@
+Array con cada categoría y sus imágenes a mostrar.
+Las imágenes deben ir colocadas en _files/keyItemMenu/name/*.jpg
+
+
 		{
 			"keyItemMenu" : "gatos",
 			"nameItemMenu" : "Gatos",

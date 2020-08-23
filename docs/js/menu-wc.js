@@ -93,13 +93,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-3f0026de5b48a4ad3a2661a05532cd25"' : 'data-target="#xs-components-links-module-AppModule-3f0026de5b48a4ad3a2661a05532cd25"' }>
+                                            'data-target="#components-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' : 'data-target="#xs-components-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-3f0026de5b48a4ad3a2661a05532cd25"' :
-                                            'id="xs-components-links-module-AppModule-3f0026de5b48a4ad3a2661a05532cd25"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' :
+                                            'id="xs-components-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' }>
                                             <li class="link">
                                                 <a href="components/AboutComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AboutComponent</a>
@@ -119,6 +119,21 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/NotFoundComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">NotFoundComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' : 'data-target="#xs-pipes-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' :
+                                            'id="xs-pipes-links-module-AppModule-9ca8e3cb366fc04fea13f112a5663225"' }>
+                                            <li class="link">
+                                                <a href="pipes/NewLinePipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">NewLinePipe</a>
                                             </li>
                                         </ul>
                                     </li>

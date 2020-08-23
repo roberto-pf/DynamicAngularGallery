@@ -11,7 +11,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { UrlSerializer } from '@angular/router';
-import { LowerCaseUrlSerializer} from './lower-case-url-serializer'
+import { LowerCaseUrlSerializer} from './lower-case-url-serializer';
+import { NewLinePipe } from './pipes/new-line.pipe';
  
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LowerCaseUrlSerializer} from './lower-case-url-serializer'
     AboutComponent,
     GalleryComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NewLinePipe
   ],
   imports: [
     BrowserModule,

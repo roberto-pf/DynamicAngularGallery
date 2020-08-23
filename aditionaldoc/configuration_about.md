@@ -1,3 +1,6 @@
+Array con los distintos métodos de contacto que existan.
+
+
 		"mail" : "contacto@disastercode.com.es",
 		"socialMedia": [
 			{

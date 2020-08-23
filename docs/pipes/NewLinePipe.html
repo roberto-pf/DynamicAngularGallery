@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content pipe">
                    <div class="content-data">
 
 
@@ -40,10 +40,9 @@
 
 
 
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>LowerCaseUrlSerializer</li>
+  <li>Pipes</li>
+  <li>NewLinePipe</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -57,59 +56,34 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
+
         <p class="comment">
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/lower-case-url-serializer.ts</code>
+            <code>src/app/pipes/new-line.pipe.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Elimina el case-sensitive de la url pasándola a minúsculas.</p>
+                <p>Pipe que convierte los saltos de linea en saltos html.</p>
 
             </p>
 
-            <p class="comment">
-                <h3>Extends</h3>
-            </p>
-            <p class="comment">
-                        <code><a href="https://angular.io/api/router/DefaultUrlSerializer" target="_blank" >DefaultUrlSerializer</a></code>
-            </p>
 
-
-
-            <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#parse">parse</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Name</td>
+                        <td class="col-md-9">newLine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
             <section>
     
@@ -120,33 +94,33 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="parse"></a>
+                    <a name="transform"></a>
                     <span class="name">
                         <b>
-                            parse
+                            transform
                         </b>
-                        <a href="#parse"><span class="icon ion-ios-link"></span></a>
+                        <a href="#transform"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>parse(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>transform(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, args: string[])</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/lower-case-url-serializer.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/pipes/new-line.pipe.ts:16</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Método que realiza la conversión de la url a minúsculas.</p>
+                    <div class="io-description"><p>Metodo que realiza la transformación</p>
 </div>
 
                     <div class="io-description">
@@ -157,12 +131,11 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
-                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>url</td>
+                                    <td>value</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -172,12 +145,18 @@
                                     </td>
 
 
+                                </tr>
+                                <tr>
+                                    <td>args</td>
                                     <td>
-                                        <ul>
-<li>dirección a tratar.</li>
-</ul>
-
+                                            <code>string[]</code>
                                     </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
                                 </tr>
                             </tbody>
                         </table>
@@ -185,7 +164,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://angular.io/api/router/UrlTree" target="_blank" >UrlTree</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -197,32 +176,35 @@
     </table>
 </section>
 
-
-
-
-
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DefaultUrlSerializer, UrlTree } from &#x27;@angular/router&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
 
 /**
- * Elimina el case-sensitive de la url pasándola a minúsculas.
+ * Pipe que convierte los saltos de linea en saltos html.
  */
-export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
+@Pipe({
+  name: &#x27;newLine&#x27;
+})
+export class NewLinePipe implements PipeTransform {
 
-    /**
-     * Método que realiza la conversión de la url a minúsculas.
-     * 
-     * @param url - dirección a tratar.
-     */
-    parse(url: string): UrlTree {
-        return super.parse(url.toLowerCase());
-    }
-}</code></pre>
+  /**
+   * Metodo que realiza la transformación
+   * @param value 
+   * @param args 
+   */
+  transform(value: string, args: string[]): any {
+      return value.replace(/(?:\r\n|\r|\n)/g, &#x27;&lt;br /&gt;&#x27;);
+  }
+
+}
+</code></pre>
     </div>
+
 </div>
+
 
 
 
@@ -247,8 +229,8 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'LowerCaseUrlSerializer.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'pipe';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewLinePipe.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

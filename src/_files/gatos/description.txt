@@ -1,8 +1,5 @@
 Coleccion de <b>gatos</b>. <br/>
 Este texto de descripción se obtiene del fichero /_files/gatos/description.txt
-<br/><br/>
+
 <b>Configuración de la sección gatos en el data.json.</b>
-<br/>
-<center>
-    <img src="../../../assets/doc.png" width="650px"/>
-</center>
+<center><img src="../../../assets/doc.png" width="650px"/></center>

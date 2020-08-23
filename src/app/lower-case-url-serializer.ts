@@ -6,7 +6,7 @@ import { DefaultUrlSerializer, UrlTree } from '@angular/router';
 export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
     /**
-     * Métdo que realiza la conversión de la url a minúsculas.
+     * Método que realiza la conversión de la url a minúsculas.
      * 
      * @param url - dirección a tratar.
      */
