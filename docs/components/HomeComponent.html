@@ -237,7 +237,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>this.jsonDataService.info</code>
+                            <i>Default value : </i><code>this.jsonDataService.getInfoJson()</code>
                         </td>
                     </tr>
                         <tr>
@@ -278,7 +278,7 @@ export class HomeComponent {
   /**
    * información para configurar la aplicación.
    */
-  public info : any &#x3D; this.jsonDataService.info; 
+  public info : any &#x3D; this.jsonDataService.getInfoJson(); 
 
   /**
    * constructor del componente
@@ -293,7 +293,9 @@ export class HomeComponent {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;br/&gt;&lt;br/&gt;
-&lt;img src&#x3D;&quot;{{info.imgPrincipal}}&quot; class&#x3D;&quot;rounded mx-auto d-block&quot; alt&#x3D;&quot;Imagen principal - {{info.titleSite}}&quot;&gt;
+&lt;div class&#x3D;&quot;text-center&quot;&gt;
+    &lt;img src&#x3D;&quot;{{info.imgPrincipal}}&quot; class&#x3D;&quot;img-fluid&quot; alt&#x3D;&quot;Imagen principal - {{info.titleSite}}&quot;&gt;
+&lt;/div&gt;
 &lt;br/&gt;</code></pre>
     </div>
 
@@ -329,7 +331,7 @@ export class HomeComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><br/><br/><img src="{{info.imgPrincipal}}" class="rounded mx-auto d-block" alt="Imagen principal - {{info.titleSite}}"><br/></div>'
+        var COMPONENT_TEMPLATE = '<div><br/><br/><div class="text-center">    <img src="{{info.imgPrincipal}}" class="img-fluid" alt="Imagen principal - {{info.titleSite}}"></div><br/></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GalleryComponent', 'selector': 'app-gallery'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};

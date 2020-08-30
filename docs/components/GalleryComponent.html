@@ -770,17 +770,21 @@ export class GalleryComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;alert alert-light&quot; role&#x3D;&quot;alert&quot;  [innerHtml]&#x3D; &quot;description | newLine&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">
+&lt;h1&gt;{{itemMenu.nameItemMenu}}&lt;/h1&gt;
+  
+&lt;div class&#x3D;&quot;alert alert-light&quot; role&#x3D;&quot;alert&quot;  [innerHtml]&#x3D; &quot;description | newLine&quot;&gt;
 &lt;/div&gt;
 
-&lt;figure class&#x3D;&quot;figure&quot; *ngFor&#x3D;&quot;let item of itemMenu.elements&quot;&gt; 
-    &lt;img data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#viewElementGallery&quot;
-        src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}&quot; 
-        alt&#x3D;&quot;{{item.name}}&quot; class&#x3D;&quot;img-thumbnail&quot;
-        (click)&#x3D;&quot;updateModalImg(item.img)&quot;/&gt;
-    &lt;figcaption class&#x3D;&quot;figure-caption text-center&quot;&gt;{{item.name}}&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;div class&#x3D;&quot;text-center&quot;&gt;
+  &lt;figure class&#x3D;&quot;figure&quot; *ngFor&#x3D;&quot;let item of itemMenu.elements&quot;&gt; 
+      &lt;img data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#viewElementGallery&quot;
+          src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}&quot; 
+          alt&#x3D;&quot;{{item.name}}&quot; class&#x3D;&quot;img-thumbnail&quot;
+          (click)&#x3D;&quot;updateModalImg(item.img)&quot;/&gt;
+      &lt;figcaption class&#x3D;&quot;figure-caption text-center&quot;&gt;{{item.name}}&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
 
 
 &lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;viewElementGallery&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;viewElementGalleryLabel&quot; 
@@ -842,7 +846,7 @@ export class GalleryComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="alert alert-light" role="alert"  [innerHtml]= "description | newLine"></div><figure class="figure" *ngFor="let item of itemMenu.elements">     <img data-toggle="modal" data-target="#viewElementGallery"        src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}"         alt="{{item.name}}" class="img-thumbnail"        (click)="updateModalImg(item.img)"/>    <figcaption class="figure-caption text-center">{{item.name}}</figcaption></figure><div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel"     aria-hidden="true">    <div class="modal-dialog modal-lg">      <div class="modal-content">        <div class="modal-header">          <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} - {{modalViewElement.name}}</h5>          <button type="button" class="close" data-dismiss="modal" aria-label="Close">            <span aria-hidden="true">&times;</span>          </button>        </div>        <div class="modal-body">            <img  *ngIf="modalViewElement.name"                src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}"                 alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block"/>        </div>        <div class="modal-footer">          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        </div>      </div>    </div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1>{{itemMenu.nameItemMenu}}</h1>  <div class="alert alert-light" role="alert"  [innerHtml]= "description | newLine"></div><div class="text-center">  <figure class="figure" *ngFor="let item of itemMenu.elements">       <img data-toggle="modal" data-target="#viewElementGallery"          src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}"           alt="{{item.name}}" class="img-thumbnail"          (click)="updateModalImg(item.img)"/>      <figcaption class="figure-caption text-center">{{item.name}}</figcaption>  </figure></div><div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel"     aria-hidden="true">    <div class="modal-dialog modal-lg">      <div class="modal-content">        <div class="modal-header">          <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} - {{modalViewElement.name}}</h5>          <button type="button" class="close" data-dismiss="modal" aria-label="Close">            <span aria-hidden="true">&times;</span>          </button>        </div>        <div class="modal-body">            <img  *ngIf="modalViewElement.name"                src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}"                 alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block"/>        </div>        <div class="modal-footer">          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        </div>      </div>    </div>  </div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GalleryComponent', 'selector': 'app-gallery'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GalleryComponent'};

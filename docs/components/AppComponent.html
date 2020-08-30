@@ -158,6 +158,9 @@
                             <li>
                                 <a href="#redirect">redirect</a>
                             </li>
+                            <li>
+                                <a href="#repliega">repliega</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -181,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/app.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -291,8 +294,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/app/app.component.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/app.component.ts:51</a></div>
                 </td>
             </tr>
 
@@ -348,6 +351,47 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="repliega"></a>
+                    <span class="name">
+                        <b>
+                            repliega
+                        </b>
+                        <a href="#repliega"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>repliega()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/app.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>repliega el navbar.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
     <section>
     
@@ -380,7 +424,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/app.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -407,6 +451,11 @@ import { JsonDataService } from &#x27;./services/json-data/json-data.service&#x2
 import { FaIconLibrary } from &#x27;@fortawesome/angular-fontawesome&#x27;;
 import { fas } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
 import { fab } from &#x27;@fortawesome/free-brands-svg-icons&#x27;;
+
+/**
+ * Para quitar el error del $.
+ */
+declare let $: any;
 
 /**
  * Componente principal
@@ -447,7 +496,15 @@ export class AppComponent {
   redirect(url:string) {
     this.router.navigateByUrl(&#x27;/&#x27;, {skipLocationChange: true})
         .then(() &#x3D;&gt; this.router.navigate([url]));
+  }
 
+
+  /**
+   * repliega el navbar.
+   */
+  repliega() {
+    $(&#x27;.navbar-collapse&#x27;).collapse(&#x27;hide&#x27;);
+    window.scrollTo(0, 0);
 
   }
 }
@@ -465,13 +522,22 @@ export class AppComponent {
 &lt;/div&gt;
 
 
-&lt;div class&#x3D;&quot;list-group list-group-horizontal&quot; &gt;
-  &lt;a routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;list-group-item list-group-item-action&quot; routerLink&#x3D;&quot;/home&quot; (click)&#x3D;&quot;redirect(&#x27;./home&#x27;)&quot;&gt;Home&lt;/a&gt;
-  &lt;a *ngFor&#x3D;&quot;let item of info.menu&quot;
-    routerLinkActive&#x3D;&quot;active&quot; routerLink&#x3D;&quot;/{{item.keyItemMenu}}&quot;  (click)&#x3D;&quot;redirect(item.keyItemMenu)&quot; 
-    class&#x3D;&quot;list-group-item list-group-item-action&quot;&gt;{{item.nameItemMenu}}&lt;/a&gt;
-  &lt;a routerLinkActive&#x3D;&quot;active&quot; routerLink&#x3D;&quot;/about&quot;  class&#x3D;&quot;list-group-item list-group-item-action&quot; (click)&#x3D;&quot;redirect(&#x27;./about&#x27;)&quot;&gt;About&lt;/a&gt;
-&lt;/div&gt;
+&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+
+  &lt;button class&#x3D;&quot;navbar-toggler&quot; type&#x3D;&quot;button&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#navbarNavAltMarkup&quot; aria-controls&#x3D;&quot;navbarNavAltMarkup&quot; aria-expanded&#x3D;&quot;false&quot; aria-label&#x3D;&quot;Toggle navigation&quot;&gt;
+    &lt;span class&#x3D;&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt; 
+  
+  &lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;navbarNavAltMarkup&quot;&gt;
+    &lt;div class&#x3D;&quot;navbar-nav&quot;&gt;
+      &lt;a (click)&#x3D;&quot;repliega()&quot; routerLinkActive&#x3D;&quot;active&quot; class&#x3D;&quot;nav-item nav-link&quot; routerLink&#x3D;&quot;/home&quot; (click)&#x3D;&quot;redirect(&#x27;./home&#x27;)&quot;&gt;Home&lt;/a&gt;
+      &lt;a (click)&#x3D;&quot;repliega()&quot; *ngFor&#x3D;&quot;let item of info.menu&quot;
+        routerLinkActive&#x3D;&quot;active&quot; routerLink&#x3D;&quot;/{{item.keyItemMenu}}&quot;  (click)&#x3D;&quot;redirect(item.keyItemMenu)&quot; 
+        class&#x3D;&quot;nav-item nav-link&quot;&gt;{{item.nameItemMenu}}&lt;/a&gt;
+      &lt;a  (click)&#x3D;&quot;repliega()&quot; routerLinkActive&#x3D;&quot;active&quot; routerLink&#x3D;&quot;/about&quot;  class&#x3D;&quot;nav-item nav-link&quot; (click)&#x3D;&quot;redirect(&#x27;./about&#x27;)&quot;&gt;About&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
 
 
 &lt;div class&#x3D;&quot;container&quot;&gt;
@@ -540,7 +606,7 @@ footer{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="media" >  <img src="{{info.logo}}" class="align-self-center mr-3 hand-click" alt="{{info.titleSite}}" (click)="redirect(\'./home\')">  <div class="media-body">    <h1 class="mt-0 hand-click" (click)="redirect(\'./home\')">{{info.titleSite}}</h1>    {{info.descriptionSite}}  </div></div><div class="list-group list-group-horizontal" >  <a routerLinkActive="active" class="list-group-item list-group-item-action" routerLink="/home" (click)="redirect(\'./home\')">Home</a>  <a *ngFor="let item of info.menu"    routerLinkActive="active" routerLink="/{{item.keyItemMenu}}"  (click)="redirect(item.keyItemMenu)"     class="list-group-item list-group-item-action">{{item.nameItemMenu}}</a>  <a routerLinkActive="active" routerLink="/about"  class="list-group-item list-group-item-action" (click)="redirect(\'./about\')">About</a></div><div class="container">  <router-outlet></router-outlet></div><footer class="container">  <hr/>  <p class="text-center" [innerHtml]= "info.footer.description"></p></footer></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="media" >  <img src="{{info.logo}}" class="align-self-center mr-3 hand-click" alt="{{info.titleSite}}" (click)="redirect(\'./home\')">  <div class="media-body">    <h1 class="mt-0 hand-click" (click)="redirect(\'./home\')">{{info.titleSite}}</h1>    {{info.descriptionSite}}  </div></div><nav class="navbar navbar-expand-lg navbar-light bg-light">  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">    <span class="navbar-toggler-icon"></span>  </button>     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">    <div class="navbar-nav">      <a (click)="repliega()" routerLinkActive="active" class="nav-item nav-link" routerLink="/home" (click)="redirect(\'./home\')">Home</a>      <a (click)="repliega()" *ngFor="let item of info.menu"        routerLinkActive="active" routerLink="/{{item.keyItemMenu}}"  (click)="redirect(item.keyItemMenu)"         class="nav-item nav-link">{{item.nameItemMenu}}</a>      <a  (click)="repliega()" routerLinkActive="active" routerLink="/about"  class="nav-item nav-link" (click)="redirect(\'./about\')">About</a>    </div>  </div></nav><div class="container">  <router-outlet></router-outlet></div><footer class="container">  <hr/>  <p class="text-center" [innerHtml]= "info.footer.description"></p></footer></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GalleryComponent', 'selector': 'app-gallery'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

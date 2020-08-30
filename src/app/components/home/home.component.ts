@@ -15,7 +15,7 @@ export class HomeComponent {
   /**
    * información para configurar la aplicación.
    */
-  public info : any = this.jsonDataService.info; 
+  public info : any = this.jsonDataService.getInfoJson(); 
 
   /**
    * constructor del componente

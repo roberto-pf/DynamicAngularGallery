@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class TxtDataService {
 
   /**
-   * constructor del componente
+   * constructor del servicio
    * @param httpClient - cliente http.
    */
   constructor(private httpClient: HttpClient) { }

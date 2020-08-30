@@ -16,11 +16,11 @@
   
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a routerLinkActive="active" class="nav-item nav-link" routerLink="/home" (click)="redirect('./home')">Home</a>
-      <a *ngFor="let item of info.menu"
+      <a (click)="repliega()" routerLinkActive="active" class="nav-item nav-link" routerLink="/home" (click)="redirect('./home')">Home</a>
+      <a (click)="repliega()" *ngFor="let item of info.menu"
         routerLinkActive="active" routerLink="/{{item.keyItemMenu}}"  (click)="redirect(item.keyItemMenu)" 
         class="nav-item nav-link">{{item.nameItemMenu}}</a>
-      <a routerLinkActive="active" routerLink="/about"  class="nav-item nav-link" (click)="redirect('./about')">About</a>
+      <a  (click)="repliega()" routerLinkActive="active" routerLink="/about"  class="nav-item nav-link" (click)="redirect('./about')">About</a>
     </div>
   </div>
 </nav>

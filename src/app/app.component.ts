@@ -8,6 +8,11 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 /**
+ * Para quitar el error del $.
+ */
+declare let $: any;
+
+/**
  * Componente principal
  * 
  * @example
@@ -46,7 +51,15 @@ export class AppComponent {
   redirect(url:string) {
     this.router.navigateByUrl('/', {skipLocationChange: true})
         .then(() => this.router.navigate([url]));
+  }
 
+
+  /**
+   * repliega el navbar.
+   */
+  repliega() {
+    $('.navbar-collapse').collapse('hide');
+    window.scrollTo(0, 0);
 
   }
 }
