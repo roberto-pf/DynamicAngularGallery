@@ -1,38 +1,63 @@
 
 <h1>{{itemMenu.nameItemMenu}}</h1>
   
-<div class="alert alert-light" role="alert"  [innerHtml]= "description | newLine">
+<div class="alert alert-light texto-msg" role="alert"  [innerHtml]= "description | newLine">
 </div>
 
-<div class="text-center">
-  <figure class="figure" *ngFor="let item of itemMenu.elements"> 
-      <img data-toggle="modal" data-target="#viewElementGallery"
-          src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}" 
-          alt="{{item.name}}" class="img-thumbnail"
-          (click)="updateModalImg(item.img)"/>
-      <figcaption class="figure-caption text-center">{{item.name}}</figcaption>
-  </figure>
-</div>
+<div class="fondo-Container">
+  <!-- Swiper Top -->
+  <div class="swiper-container gallery-top gallery-top-{{itemMenu.keyItemMenu}}">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-lazy" *ngFor="let item of itemMenu.elements">
+      
+        <!-- Swiper Vertical -->
+        <div class="swiper-container gallery-top gallery-vertical-{{item.dirName}}">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-lazy" *ngFor="let n of numSequence( item.totalImg )"
+              style="background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg)"
+              data-toggle="modal" data-target="#viewElementGallery" (click)="updateModalImg(item.dirName, n)">
+              <!--<div class="swiper-lazy-preloader"></div>
+              <img data-src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg" class="swiper-lazy">-->
+              <div class="swiper-lazy-preloader"></div>
+              <div class="badge badge-primary text-wrap" style="width: 16rem;">
+                {{item.name}}
+              </div>
 
 
-<div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel" 
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} - {{modalViewElement.name}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <img  *ngIf="modalViewElement.name"
-                src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}" 
-                alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-v"></div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Swiper thumbs -->
+  <div class="swiper-container gallery-thumbs gallery-thumbs-{{itemMenu.keyItemMenu}}">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let item of itemMenu.elements"
+        style="background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/thumbail.jpg)">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} // {{modalViewElement.name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img *ngIf="modalViewElement.name"
+          src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.dirName}}/{{modalViewElement.img}}"
+          alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block" />
+      </div>
+    </div>
+  </div>
+</div>

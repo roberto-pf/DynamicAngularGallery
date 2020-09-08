@@ -25,8 +25,8 @@ export class JsonDataService {
       nameItemMenu:string,
       elements : {
         name:string,
-        thumbail:string,
-        img:string
+        dirName:string,
+        totalImg:number
       }[]
     }[],
     footer : {
