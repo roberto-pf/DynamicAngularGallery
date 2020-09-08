@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 import { JsonDataService } from '../../services/json-data/json-data.service';
 import { TxtDataService } from '../../services/txt-data/txt-data.service';
 
+/**
+ * Variable para utilización del plugin SwiperJs
+ */
 declare let Swiper: any;
 
 

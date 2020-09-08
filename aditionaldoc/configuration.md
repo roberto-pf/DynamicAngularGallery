@@ -1,39 +1,40 @@
 Example data.json:
 
 
-	"titleSite" : "Dynamic Angular Gallery",
-	"descriptionSite" : "Galeria dinámica en angular 10+",
+
+	"titleSite" : "Swiper - Dynamic Angular Gallery",
+	"descriptionSite" : "Swiper - Galeria dinámica en angular 10+",
 	"logo" : "../assets/logo-150x150.png",
 	"imgPrincipal" : "../../../assets/portada.png",
 	"menu" : [
 		{
 			"keyItemMenu" : "gatos",
-			"nameItemMenu" : "Gatos",
+			"nameItemMenu" : "Categoría de Gatos",
 			"elements" : [
-				{ "name" : "GATO 1", "thumbail" : "gato1_150.jpg", "img" : "gato1.jpg" },
-				{ "name" : "GATO 2", "thumbail" : "gato2_150.jpg", "img" : "gato2.jpg" },
-				{ "name" : "GATO 3", "thumbail" : "gato3_150.jpg", "img" : "gato3.jpg" },
-				{ "name" : "GATO 4", "thumbail" : "gato4_150.jpg", "img" : "gato4.jpg" }
+				{ "name" : "Gato Tipo 1", "dirName" : "gato_1", "totalImg" : 3 },
+				{ "name" : "Gato Tipo 2", "dirName" : "gato_2", "totalImg" : 1 },
+				{ "name" : "Gato Tipo 3", "dirName" : "gato_3", "totalImg" : 2 },
+				{ "name" : "Gato Tipo 4", "dirName" : "gato_4", "totalImg" : 1 }
 			]
 		},
 		{
 			"keyItemMenu" : "perros",
-			"nameItemMenu" : "Perros",
+			"nameItemMenu" : "Categoría de Perros",
 			"elements" : [
-				{ "name" : "PERRO 1", "thumbail" : "dog1_150.jpg", "img" : "dog1.jpg" },
-				{ "name" : "PERRO 2", "thumbail" : "dog2_150.jpg", "img" : "dog2.jpg" },
-				{ "name" : "PERRO 3", "thumbail" : "dog3_150.jpg", "img" : "dog3.jpg" },
-				{ "name" : "PERRO 4", "thumbail" : "dog4_150.jpg", "img" : "dog4.jpg" },
-				{ "name" : "PERRO 5", "thumbail" : "dog5_150.jpg", "img" : "dog5.jpg" },
-				{ "name" : "PERRO 6", "thumbail" : "dog6_150.jpg", "img" : "dog6.jpg" },
-				{ "name" : "PERRO 7", "thumbail" : "dog7_150.jpg", "img" : "dog7.jpg" },
-				{ "name" : "PERRO 8", "thumbail" : "dog8_150.jpg", "img" : "dog8.jpg" },
-				{ "name" : "PERRO 9", "thumbail" : "dog9_150.jpg", "img" : "dog9.jpg" }
+				{ "name" : "Perro Tipo 1", "dirName" : "perro_1", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 2", "dirName" : "perro_2", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 3", "dirName" : "perro_3", "totalImg" : 3 },
+				{ "name" : "Perro Tipo 4", "dirName" : "perro_4", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 5", "dirName" : "perro_5", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 6", "dirName" : "perro_6", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 7", "dirName" : "perro_7", "totalImg" : 1 },
+				{ "name" : "Perro Tipo 8", "dirName" : "perro_8", "totalImg" : 3 },
+				{ "name" : "Perro Tipo 9", "dirName" : "perro_9", "totalImg" : 1 }
 			]
 		}		
 	],
 	"footer" : {
-		"description" : "&copy;Copyright 2020 - http://gallery.disastercode.com.es"
+		"description" : "&copy;Copyright 2020 - http://galleryswiper.disastercode.com.es"
 	},
 	"about" : {
 		"mail" : "contacto@disastercode.com.es",

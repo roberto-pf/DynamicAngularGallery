@@ -4,11 +4,11 @@ Las imágenes deben ir colocadas en _files/keyItemMenu/name/*.jpg
 
 		{
 			"keyItemMenu" : "gatos",
-			"nameItemMenu" : "Gatos",
+			"nameItemMenu" : "Categoría de Gatos",
 			"elements" : [
-				{ "name" : "GATO 1", "thumbail" : "gato1_150.jpg", "img" : "gato1.jpg" },
-				{ "name" : "GATO 2", "thumbail" : "gato2_150.jpg", "img" : "gato2.jpg" },
-				{ "name" : "GATO 3", "thumbail" : "gato3_150.jpg", "img" : "gato3.jpg" },
-				{ "name" : "GATO 4", "thumbail" : "gato4_150.jpg", "img" : "gato4.jpg" }
+				{ "name" : "Gato Tipo 1", "dirName" : "gato_1", "totalImg" : 3 },
+				{ "name" : "Gato Tipo 2", "dirName" : "gato_2", "totalImg" : 1 },
+				{ "name" : "Gato Tipo 3", "dirName" : "gato_3", "totalImg" : 2 },
+				{ "name" : "Gato Tipo 4", "dirName" : "gato_4", "totalImg" : 1 }
 			]
 		},

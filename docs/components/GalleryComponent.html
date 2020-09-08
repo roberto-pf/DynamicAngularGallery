@@ -79,6 +79,7 @@
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
     </p>
 
 
@@ -170,12 +171,20 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnDestroy">ngOnDestroy</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#numSequence">numSequence</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#updateModalImg">updateModalImg</a>
                             </li>
                         </ul>
@@ -201,7 +210,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/gallery/gallery.component.ts:52</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/gallery/gallery.component.ts:57</a></div>
                             </td>
                         </tr>
 
@@ -297,6 +306,47 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Inicializa los objetos Swiper de la aplicación</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnDestroy"></a>
                     <span class="name">
                         <b>
@@ -315,8 +365,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="95"
-                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:95</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:106</a></div>
                 </td>
             </tr>
 
@@ -357,8 +407,8 @@ El evento se ejecuta al destruir el componente.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:77</a></div>
                 </td>
             </tr>
 
@@ -381,9 +431,92 @@ El evento se ejecuta al iniciarse el componente.</p>
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="numSequence"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            numSequence
+                        </b>
+                        <a href="#numSequence"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>numSequence(n: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Devuelve una lista de elementos desde 1 hasta n con el formato 0000</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>n</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>total de elementos a generar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;String&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>numbers - Array<String></li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="updateModalImg"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             updateModalImg
                         </b>
                         <a href="#updateModalImg"><span class="icon ion-ios-link"></span></a>
@@ -392,15 +525,16 @@ El evento se ejecuta al iniciarse el componente.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>updateModalImg(img: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateModalImg(dirName: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, img: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="105"
-                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:105</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/app/components/gallery/gallery.component.ts:164</a></div>
                 </td>
             </tr>
 
@@ -422,6 +556,24 @@ El evento se ejecuta al iniciarse el componente.</p>
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>dirName</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>directorio donde se encuentra la imagen a mostrar.</li>
+</ul>
+
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>img</td>
                                     <td>
@@ -488,7 +640,7 @@ El evento se ejecuta al iniciarse el componente.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/gallery/gallery.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/gallery/gallery.component.ts:35</a></div>
                             </td>
                         </tr>
 
@@ -527,7 +679,7 @@ El evento se ejecuta al iniciarse el componente.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/gallery/gallery.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/gallery/gallery.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -561,7 +713,7 @@ El evento se ejecuta al iniciarse el componente.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/components/gallery/gallery.component.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/gallery/gallery.component.ts:52</a></div>
                             </td>
                         </tr>
 
@@ -600,7 +752,7 @@ El evento se ejecuta al iniciarse el componente.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/components/gallery/gallery.component.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/components/gallery/gallery.component.ts:57</a></div>
                             </td>
                         </tr>
 
@@ -634,7 +786,7 @@ El evento se ejecuta al iniciarse el componente.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/components/gallery/gallery.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/gallery/gallery.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -653,10 +805,15 @@ El evento se ejecuta al iniciarse el componente.</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
 import { JsonDataService } from &#x27;../../services/json-data/json-data.service&#x27;;
 import { TxtDataService } from &#x27;../../services/txt-data/txt-data.service&#x27;;
+
+/**
+ * Variable para utilización del plugin SwiperJs
+ */
+declare let Swiper: any;
 
 
 /**
@@ -667,7 +824,7 @@ import { TxtDataService } from &#x27;../../services/txt-data/txt-data.service&#x
   templateUrl: &#x27;./gallery.component.html&#x27;,
   styleUrls: [&#x27;./gallery.component.scss&#x27;]
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements OnInit, AfterViewInit {
 
   /**
    * variable para subcribirse a la petición http.
@@ -677,12 +834,12 @@ export class GalleryComponent implements OnInit {
   /**
    * información para configurar la aplicación.
    */
-  public info : any &#x3D; this.jsonDataService.info; 
+  public info: any &#x3D; this.jsonDataService.info;
 
   /**
    * descripción de la categoria a mostrar.
    */
-  public description : String &#x3D; &quot;&quot;;
+  public description: String &#x3D; &quot;&quot;;
 
   /**
    * almacena la url actual.
@@ -695,7 +852,7 @@ export class GalleryComponent implements OnInit {
    * @ignore
    */
   private option: String &#x3D; &quot;&quot;;
-  
+
   /**
    * almacena el elemento del menu principal actual.
    */
@@ -705,17 +862,20 @@ export class GalleryComponent implements OnInit {
    * Información para mostrar en el dialog.
    */
   public modalViewElement: any &#x3D; {};
-  
+
+
   /**
    * constructor del componente
    * @param jsonDataService - servicio acceso al data.json
    * @param txtDataService - servicio acceso mediante httpClient
    * @param router - modulo de routing 
    */
-  constructor(private jsonDataService : JsonDataService, 
-              private txtDataService : TxtDataService, 
-              private router : Router) {
+  constructor(private jsonDataService: JsonDataService,
+    private txtDataService: TxtDataService,
+    private router: Router) {
+      
   }
+
 
   /**
    * Recupera la información para configurar la aplicación.
@@ -728,12 +888,13 @@ export class GalleryComponent implements OnInit {
     this.info.menu.forEach(element &#x3D;&gt; {
       if( element[&#x27;keyItemMenu&#x27;] &#x3D;&#x3D; this.option){
         this.itemMenu &#x3D; element;
+        this.modalViewElement &#x3D; this.itemMenu.elements[0];
+        this.modalViewElement[&#x27;img&#x27;] &#x3D; &quot;0001.jpg&quot;;
 
         this.subscription &#x3D; this.txtDataService.getText( &quot;../../../_files/&quot; + this.option + &quot;/&quot; + &quot;description.txt&quot;)
           .subscribe((data:any) &#x3D;&gt; {
             this.description &#x3D; data;
         });
-
       }
     });
     if( this.subscription &#x3D;&#x3D; undefined ){
@@ -742,6 +903,8 @@ export class GalleryComponent implements OnInit {
     }
 
   }
+
+
 
   /**
    * elimina la subscripción de la petición http.
@@ -753,18 +916,81 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+
+  /**
+   * Inicializa los objetos Swiper de la aplicación
+   */
+  ngAfterViewInit() {
+      let galleryThumbs &#x3D; new Swiper(&#x27;.gallery-thumbs-&#x27;+this.itemMenu[&#x27;keyItemMenu&#x27;], {
+        spaceBetween: 1,
+        slidesPerView: 5,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+
+      let galleryTop &#x3D; new Swiper(&#x27;.gallery-top-&#x27;+this.itemMenu[&#x27;keyItemMenu&#x27;], {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 5, 
+        preloadImages: false,
+        lazy: true,
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      });
+
+
+    this.itemMenu.elements.forEach(element &#x3D;&gt; {
+      new Swiper(&#x27;.gallery-vertical-&#x27;+element[&#x27;dirName&#x27;], {
+        direction: &#x27;vertical&#x27;,
+        spaceBetween: 30,
+        loop: true,
+        lazy: true,
+        pagination: {
+          el: &#x27;.swiper-pagination-v&#x27;,
+          clickable: true,
+          renderBullet: function (index, className) {
+            return &#x27;&lt;span class&#x3D;&quot;&#x27; + className + &#x27;&quot;&gt;&#x27; + (index + 1) + &#x27;&lt;/span&gt;&#x27;;
+          }
+        }
+      });
+    });
+  }
+
+
   /**
    * Actualiza la información a mostar en el dialog.
    * @param img - imagen que se quiere mostrar en el dialog.
+   * @param dirName - directorio donde se encuentra la imagen a mostrar.
    */
-  updateModalImg(img:String){
+  public updateModalImg(dirName: any, img: String) {
     this.itemMenu.elements.forEach(element &#x3D;&gt; {
-      if( element[&#x27;img&#x27;] &#x3D;&#x3D; img){
+      if (element[&#x27;dirName&#x27;] &#x3D;&#x3D; dirName) {
         this.modalViewElement &#x3D; element;
+        this.modalViewElement[&#x27;img&#x27;] &#x3D; img + &quot;.jpg&quot;;
         return;
       }
     });
   }
+
+
+  /**
+   * Devuelve una lista de elementos desde 1 hasta n con el formato 0000
+   * @param n total de elementos a generar
+   * @returns - numbers - Array&lt;String&gt;
+   */
+  public numSequence(n: number): Array&lt;String&gt; { 
+    let numbers &#x3D; new Array&lt;String&gt;(); 
+    for(let i&#x3D;1; i&lt;&#x3D;n; i++){
+      numbers.push(  (&quot;0000&quot;+i).slice(-4)  );
+    }
+    return numbers; 
+  } 
 }
 </code></pre>
     </div>
@@ -773,51 +999,138 @@ export class GalleryComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">
 &lt;h1&gt;{{itemMenu.nameItemMenu}}&lt;/h1&gt;
   
-&lt;div class&#x3D;&quot;alert alert-light&quot; role&#x3D;&quot;alert&quot;  [innerHtml]&#x3D; &quot;description | newLine&quot;&gt;
+&lt;div class&#x3D;&quot;alert alert-light texto-msg&quot; role&#x3D;&quot;alert&quot;  [innerHtml]&#x3D; &quot;description | newLine&quot;&gt;
 &lt;/div&gt;
 
-&lt;div class&#x3D;&quot;text-center&quot;&gt;
-  &lt;figure class&#x3D;&quot;figure&quot; *ngFor&#x3D;&quot;let item of itemMenu.elements&quot;&gt; 
-      &lt;img data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#viewElementGallery&quot;
-          src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}&quot; 
-          alt&#x3D;&quot;{{item.name}}&quot; class&#x3D;&quot;img-thumbnail&quot;
-          (click)&#x3D;&quot;updateModalImg(item.img)&quot;/&gt;
-      &lt;figcaption class&#x3D;&quot;figure-caption text-center&quot;&gt;{{item.name}}&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+&lt;div class&#x3D;&quot;fondo-Container&quot;&gt;
+  &lt;!-- Swiper Top --&gt;
+  &lt;div class&#x3D;&quot;swiper-container gallery-top gallery-top-{{itemMenu.keyItemMenu}}&quot;&gt;
+    &lt;div class&#x3D;&quot;swiper-wrapper&quot;&gt;
+      &lt;div class&#x3D;&quot;swiper-slide swiper-lazy&quot; *ngFor&#x3D;&quot;let item of itemMenu.elements&quot;&gt;
+      
+        &lt;!-- Swiper Vertical --&gt;
+        &lt;div class&#x3D;&quot;swiper-container gallery-top gallery-vertical-{{item.dirName}}&quot;&gt;
+          &lt;div class&#x3D;&quot;swiper-wrapper&quot;&gt;
+            &lt;div class&#x3D;&quot;swiper-slide swiper-lazy&quot; *ngFor&#x3D;&quot;let n of numSequence( item.totalImg )&quot;
+              style&#x3D;&quot;background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg)&quot;
+              data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#viewElementGallery&quot; (click)&#x3D;&quot;updateModalImg(item.dirName, n)&quot;&gt;
+              &lt;!--&lt;div class&#x3D;&quot;swiper-lazy-preloader&quot;&gt;&lt;/div&gt;
+              &lt;img data-src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg&quot; class&#x3D;&quot;swiper-lazy&quot;&gt;--&gt;
+              &lt;div class&#x3D;&quot;swiper-lazy-preloader&quot;&gt;&lt;/div&gt;
+              &lt;div class&#x3D;&quot;badge badge-primary text-wrap&quot; style&#x3D;&quot;width: 16rem;&quot;&gt;
+                {{item.name}}
+              &lt;/div&gt;
 
 
-&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;viewElementGallery&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;viewElementGalleryLabel&quot; 
-    aria-hidden&#x3D;&quot;true&quot;&gt;
-    &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
-      &lt;div class&#x3D;&quot;modal-content&quot;&gt;
-        &lt;div class&#x3D;&quot;modal-header&quot;&gt;
-          &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;viewElementGalleryLabel&quot;&gt;{{itemMenu.nameItemMenu}} - {{modalViewElement.name}}&lt;/h5&gt;
-          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
-            &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;modal-body&quot;&gt;
-            &lt;img  *ngIf&#x3D;&quot;modalViewElement.name&quot;
-                src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}&quot; 
-                alt&#x3D;&quot;{{modalViewElement.name}}&quot; class&#x3D;&quot;img-fluid rounded mx-auto d-block&quot;/&gt;
-        &lt;/div&gt;
-        &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
-          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Close&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;swiper-pagination swiper-pagination-v&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+  &lt;/div&gt;
+  &lt;!-- Swiper thumbs --&gt;
+  &lt;div class&#x3D;&quot;swiper-container gallery-thumbs gallery-thumbs-{{itemMenu.keyItemMenu}}&quot;&gt;
+    &lt;div class&#x3D;&quot;swiper-wrapper&quot;&gt;
+      &lt;div class&#x3D;&quot;swiper-slide&quot; *ngFor&#x3D;&quot;let item of itemMenu.elements&quot;
+        style&#x3D;&quot;background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/thumbail.jpg)&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;viewElementGallery&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;viewElementGalleryLabel&quot;
+  aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;viewElementGalleryLabel&quot;&gt;{{itemMenu.nameItemMenu}} // {{modalViewElement.name}}&lt;/h5&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;img *ngIf&#x3D;&quot;modalViewElement.name&quot;
+          src&#x3D;&quot;../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.dirName}}/{{modalViewElement.img}}&quot;
+          alt&#x3D;&quot;{{modalViewElement.name}}&quot; class&#x3D;&quot;img-fluid rounded mx-auto d-block&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./gallery.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.figure{
-    margin-right: 10px;
-    vertical-align: middle;
-    cursor: pointer;
+                <pre class="line-numbers"><code class="language-scss">html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.fondo-Container {
+  background-image: url(&quot;../../../assets/wallpaper.jpeg&quot;);
+  padding: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  max-height: 550px;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  max-height: 150px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }</code></pre>
     </div>
 
@@ -846,7 +1159,7 @@ export class GalleryComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1>{{itemMenu.nameItemMenu}}</h1>  <div class="alert alert-light" role="alert"  [innerHtml]= "description | newLine"></div><div class="text-center">  <figure class="figure" *ngFor="let item of itemMenu.elements">       <img data-toggle="modal" data-target="#viewElementGallery"          src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.name}}/{{item.thumbail}}"           alt="{{item.name}}" class="img-thumbnail"          (click)="updateModalImg(item.img)"/>      <figcaption class="figure-caption text-center">{{item.name}}</figcaption>  </figure></div><div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel"     aria-hidden="true">    <div class="modal-dialog modal-lg">      <div class="modal-content">        <div class="modal-header">          <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} - {{modalViewElement.name}}</h5>          <button type="button" class="close" data-dismiss="modal" aria-label="Close">            <span aria-hidden="true">&times;</span>          </button>        </div>        <div class="modal-body">            <img  *ngIf="modalViewElement.name"                src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.name}}/{{modalViewElement.img}}"                 alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block"/>        </div>        <div class="modal-footer">          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        </div>      </div>    </div>  </div></div>'
+        var COMPONENT_TEMPLATE = '<div><h1>{{itemMenu.nameItemMenu}}</h1>  <div class="alert alert-light texto-msg" role="alert"  [innerHtml]= "description | newLine"></div><div class="fondo-Container">  <!-- Swiper Top -->  <div class="swiper-container gallery-top gallery-top-{{itemMenu.keyItemMenu}}">    <div class="swiper-wrapper">      <div class="swiper-slide swiper-lazy" *ngFor="let item of itemMenu.elements">              <!-- Swiper Vertical -->        <div class="swiper-container gallery-top gallery-vertical-{{item.dirName}}">          <div class="swiper-wrapper">            <div class="swiper-slide swiper-lazy" *ngFor="let n of numSequence( item.totalImg )"              style="background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg)"              data-toggle="modal" data-target="#viewElementGallery" (click)="updateModalImg(item.dirName, n)">              <!--<div class="swiper-lazy-preloader"></div>              <img data-src="../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/{{n}}.jpg" class="swiper-lazy">-->              <div class="swiper-lazy-preloader"></div>              <div class="badge badge-primary text-wrap" style="width: 16rem;">                {{item.name}}              </div>            </div>          </div>          <div class="swiper-pagination swiper-pagination-v"></div>        </div>      </div>    </div>  </div>  <!-- Swiper thumbs -->  <div class="swiper-container gallery-thumbs gallery-thumbs-{{itemMenu.keyItemMenu}}">    <div class="swiper-wrapper">      <div class="swiper-slide" *ngFor="let item of itemMenu.elements"        style="background-image:url(../../../_files/{{itemMenu.keyItemMenu}}/{{item.dirName}}/thumbail.jpg)">      </div>    </div>  </div></div><div class="modal fade" id="viewElementGallery" tabindex="-1" role="dialog" aria-labelledby="viewElementGalleryLabel"  aria-hidden="true">  <div class="modal-dialog modal-lg">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title" id="viewElementGalleryLabel">{{itemMenu.nameItemMenu}} // {{modalViewElement.name}}</h5>        <button type="button" class="close" data-dismiss="modal" aria-label="Close">          <span aria-hidden="true">&times;</span>        </button>      </div>      <div class="modal-body">        <img *ngIf="modalViewElement.name"          src="../../../_files/{{itemMenu.keyItemMenu}}/{{modalViewElement.dirName}}/{{modalViewElement.img}}"          alt="{{modalViewElement.name}}" class="img-fluid rounded mx-auto d-block" />      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GalleryComponent', 'selector': 'app-gallery'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GalleryComponent'};
